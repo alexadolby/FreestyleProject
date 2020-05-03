@@ -5,6 +5,7 @@ from datetime import date
 from app import APP_ENV
 from app.email_service import send_email
 import json
+#from app.market_service import get_stocks
 
 load_dotenv()
 
@@ -16,8 +17,14 @@ MY_NAME = os.getenv("MY_NAME", default="Player 1")
 if __name__ == "__main__":
 
     if APP_ENV == "development":
-        symbol = input("PLEASE INPUT A STOCK SYMBOL: ")
-        
+        symbol = input("PLEASE INPUT A STOCK SYMBOL, WHEN FINISHED TYPE DONE: ")
+        stock_results = get_stocks(symbol=symbol) # Custom stock selection
+    else:
+        stock_results = get_stocks() #Use Default (INX, DJI)
+
+
+ #Print stock data for all stocks
+ 
     html = ""
     html += f"<h3>Good Evening, {MY_NAME}!</h3>"
 

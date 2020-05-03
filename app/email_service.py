@@ -25,9 +25,9 @@ def send_email(subject="[Market Daily] This is a test", html="<p>Hello World</p>
         return None
 
 if __name__ == "__main__":
-    example_subject = "[Market Daily] This is a test"
+    example_subject = "[Market Daily] This is a test" #This tests to make sure the email capabilities are working correctly
 
-    example_html = f"""
+    example_html = f""" 
     <h3>This is a test of the Market Daily Service</h3>
     <h4>Today's Date</h4>
     <p>Monday, May 1, 2030</p>

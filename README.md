@@ -61,7 +61,7 @@ python -m app.email_service # note the module-syntax invocation
 As long as each of those scripts works by itself, you can send the email:
 
 ```sh
-python -m app.daily_briefing # note the module-syntax invocation
+python -m app.market_daily # note the module-syntax invocation
 ```
 
 ![](https://user-images.githubusercontent.com/1328807/77860069-173ef580-71db-11ea-83c6-5897bb9f4f51.png)
