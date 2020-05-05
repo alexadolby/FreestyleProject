@@ -156,3 +156,11 @@ From the "Resources" tab in your application's Heroku dashboard, search for an a
 Finally, click on the provisioned "Heroku Scheduler" resource from the "Resources" tab, then click to "Add a new Job". When adding the job, choose to execute the designated python command (`python -m app.market_briefing`) at a scheduled interval (e.g. every day), and finally click to "Save" the job:
 
 ![a screenshot of ](https://user-images.githubusercontent.com/1328807/54229044-da259980-44d9-11e9-91d8-51773499cbfb.png)
+
+## Testing
+
+Run tests
+
+```sh
+pytest
+```

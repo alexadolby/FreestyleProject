@@ -18,23 +18,20 @@ if __name__ == "__main__":
 
     if APP_ENV == "development":
         symbol = input("PLEASE INPUT A STOCK SYMBOL, WHEN FINISHED TYPE DONE: ")
-        stock_results = get_stocks(symbol=symbol) # Custom stock selection
+        #stock_results = get_stocks(symbol=symbol) # Custom stock selection
     else:
-        stock_results = get_stocks() #Use Default (INX, DJI)
+        #stock_results = get_stocks() #Use Default (INX, DJI)
 
 
  #Print stock data for all stocks
- 
-    html = ""
-    html += f"<h3>Good Evening, {MY_NAME}!</h3>"
 
-    html += "<h4>Today's Date</h4>"
-    html += f"<p>{date.today().strftime('%A, %B %d, %Y')}</p>"
+    print_html = f"""
+    <h3>Good Evening, {MY_NAME}!</h3>"
 
-    html += f"<h4>Market Data for {symbol}</h4>" #DEFINE SYMBOL
-    html += "<ul>"
-    #for hourly in weather_results["hourly_forecasts"]:
-        #html += f"<li>{hourly['timestamp']} | {hourly['temp']} | {hourly['conditions'].upper()}</li>"
-    html += "</ul>"
+    <h4>Today's Date</h4>"
+    <p>{date.today().strftime('%A, %B %d, %Y')}</p>"
 
-    send_email(subject="[Market Daily] My Closing Report", html=html)
+    <h4>Market Data for {symbol}</h4>" #DEFINE SYMBOL
+    
+    """
+    send_email(subject="[Market Daily] My Closing Report", html=print_html)
