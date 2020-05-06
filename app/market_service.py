@@ -22,6 +22,13 @@ ALPHA_VANTAGE_API_KEY = os.getenv("ALPHA_VANTAGE_API_KEY")
 #User inputs the stocks they want to follow
 while True:
     symbol = input("Please input a stock symbol, when finished type DONE: ")
+    if len(symbol) < 1:
+	    print("Symbol seems too short. Please try again")
+    elif len(symbol) > 6: # 6 seems to be the max length of a ticker: https://www.quora.com/Whats-the-shortest-and-the-longest-that-a-companys-ticker-can-be-on-a-stock-market-exchange
+	    print("That symbol seems too long. Please try again.")
+    elif IndexError:
+                print("Please try again, symbol not found")
+                exit()
     request_url = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={symbol}&apikey={ALPHA_VANTAGE_API_KEY}"
     response = requests.get(request_url)
     parsed_response = json.loads(response.text)

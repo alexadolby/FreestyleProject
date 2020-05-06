@@ -26,17 +26,23 @@ def send_email(subject="[Market Daily] This is a test", html="<p>Hello World</p>
         return None
 
 if __name__ == "__main__":
-    example_subject = "[Market Daily] This is a test" #This tests to make sure the email capabilities are working correctly
+    example_subject = "Market Closing " #This tests to make sure the email capabilities are working correctly
 
     example_html = f""" 
-    <h3>This is a test of the Market Daily Service</h3>
+    <h2>Good Evening, here are your daily closing prices!</h3>
     <h4>Today's Date</h4>
-    <p>Monday, May 1, 2030</p>
-    <h4>My Stocks</h4>
-    <ul>
-        <li>MSFT | +04%</li>
-        <li>WORK | +20%</li>
-        <li>ZM | +44%</li>
+    <p>Tuesday, May 5, 2020</p>
+    <h2>My Stocks</h4>
+    <h4>MSFT</H4>
+        <p>Opening Price: $180.62</p>
+        <p>Closing Price: $180.76</p>
+    <h4>AAPL</H4>
+        <p>Opening Price: $295.06</p>
+        <p>Closing Price: $297.56</p>
+    <h4>EAT</H4>
+        <p>Opening Price: $20.91</p>
+        <p>Closing Price: $19.75</p>
+    <h2>Have a good night!</h2>
     """
 
     send_email(example_subject, example_html)
