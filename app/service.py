@@ -97,20 +97,21 @@ if __name__ == "__main__":
     subject = "Market Closing " #This tests to make sure the email capabilities are working correctly
 
     html = f""" 
-    <h2 style="color: salmon;">Good Evening, here are your daily closing prices!</h3>
+    <body style="background-color:whitesmoke;">
+    <h2 style="color: darkslateblue;">Good Evening, here are your daily closing prices!</h3>
     <h4 style="color: grey;">Today's Date</h4>
     <p style="color: grey;">{date.today().strftime('%A, %B %d, %Y')}</p>
-    <h2 style="color: salmon;">My Stocks</h4>
-    <h4 style="color: rosybrown;">{symbol}</H4>
+    <h2 style="color: darkslateblue;">My Stocks</h4>
+    <h4 style="color: slateblue;">{symbol}</H4>
         <p>Opening Price: {to_usd(float(latest_open))}</p>
         <p>Closing Price: {to_usd(float(latest_close))}</p>
-    <h4 style="color: rosybrown;">{second_symbol}</H4>
+    <h4 style="color: slateblue;">{second_symbol}</H4>
         <p>Opening Price: {to_usd(float(latest_open2))}</p>
         <p>Closing Price: {to_usd(float(latest_close2))}</p>
-    <h4 style="color: rosybrown;">{third_symbol}</H4>
+    <h4 style="color: slateblue;">{third_symbol}</H4>
         <p>Opening Price: {to_usd(float(latest_open3))}</p>
         <p>Closing Price: {to_usd(float(latest_close3))}</p>
-    <h2 style="color: salmon;">Have a good night!</h2>
+    <h2 style="color: darkslateblue;">Have a good night!</h2>
     """
 
     send_email(subject, html)
