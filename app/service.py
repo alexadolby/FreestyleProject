@@ -49,8 +49,8 @@ dict = {
     "end_price": latest_close
 }
 
-print(dict)
-breakpoint
+#print(dict)
+#breakpoint
 
 second_symbol = second_symbol1 #"AMZN"
 request_url2 = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={second_symbol}&apikey={ALPHA_VANTAGE_API_KEY}"
@@ -69,8 +69,8 @@ dict2 = {
     "end_price": latest_close2
 }
 
-print(dict2)
-breakpoint 
+#print(dict2)
+#breakpoint 
 
 third_symbol = third_symbol1 #"DIS"
 request_url3 = f"https://www.alphavantage.co/query?function=TIME_SERIES_DAILY&symbol={third_symbol}&apikey={ALPHA_VANTAGE_API_KEY}"
@@ -89,8 +89,8 @@ dict3 = {
     "end_price": latest_close3
 }
 
-print(dict3)
-breakpoint 
+#print(dict3)
+#breakpoint 
 
 
 if __name__ == "__main__":
