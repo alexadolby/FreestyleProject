@@ -102,14 +102,14 @@ if __name__ == "__main__":
     <p>{date.today().strftime('%A, %B %d, %Y')}</p>
     <h2>My Stocks</h4>
     <h4>{symbol}</H4>
-        <p>Opening Price: {latest_open}</p>
-        <p>Closing Price: {latest_close}</p>
+        <p>Opening Price: {to_usd(float(latest_open))}</p>
+        <p>Closing Price: {to_usd(float(latest_close))}</p>
     <h4>{second_symbol}</H4>
-        <p>Opening Price: {latest_open2}</p>
-        <p>Closing Price: {latest_close2}</p>
+        <p>Opening Price: {to_usd(float(latest_open2))}</p>
+        <p>Closing Price: {to_usd(float(latest_close2))}</p>
     <h4>{third_symbol}</H4>
-        <p>Opening Price: {latest_open3}</p>
-        <p>Closing Price: {latest_close3}</p>
+        <p>Opening Price: {to_usd(float(latest_open3))}</p>
+        <p>Closing Price: {to_usd(float(latest_close3))}</p>
     <h2>Have a good night!</h2>
     """
 
