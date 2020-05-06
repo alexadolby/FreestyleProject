@@ -42,12 +42,7 @@ MY_NAME="Jon Snow"
 
 ## Usage
 
-From within the virtual environment, ensure you can run each of the following files and see them produce their desired results of: printing today's time series data, and sending an example email, respectively.
-
-```sh
-python -m app.market_service # note the module-syntax invocation
-#> TODAYS TIME SERIES DATA ...
-```
+From within the virtual environment, ensure you can run the following file and see it produce their desired results of sending an example email
 
 ```sh
 python -m app.email_service # note the module-syntax invocation
@@ -61,7 +56,7 @@ python -m app.email_service # note the module-syntax invocation
 As long as each of those scripts works by itself, you can send the email:
 
 ```sh
-python -m app.daily_service # note the module-syntax invocation
+python -m app.service # note the module-syntax invocation
 ```
 
 ![](https://user-images.githubusercontent.com/1328807/77860069-173ef580-71db-11ea-83c6-5897bb9f4f51.png)
@@ -134,13 +129,12 @@ Once you've deployed the source code to the Heroku server, login to the server t
 
 ```sh
 heroku run bash # login to the server
-# ... whoami # see that you are not on your local computer anymore
 # ... ls -al # optionally see the files, nice!
-# ... python -m app.daily_briefing # see the output, nice!
+# ... python -m app.service # see the output, nice!
 # ... exit # logout
 
 # or alternatively, run it from your computer, in "detached" mode:
-heroku run "python -m app.market_briefing"
+heroku run "python -m app.service"
 ```
 
 ## Scheduling the Script
