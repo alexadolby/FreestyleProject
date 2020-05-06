@@ -12,9 +12,11 @@ load_dotenv()
 def line():
         print("-" * 30)
 
+# format price values
 def to_usd(my_price):
     return "${0:,.2f}".format(my_price) 
 
+#Use to get Alpha Vantage stock data
 ALPHA_VANTAGE_API_KEY = os.getenv("ALPHA_VANTAGE_API_KEY")
 
 #User inputs the stocks they want to follow
@@ -30,23 +32,22 @@ while True:
 
     dates = list(tsd.keys())
 
-    latest_day = dates[0]
+    latest_day = dates[0] #Today's date to find open and close for the day 
 
-    latest_open = tsd[latest_day]["1. open"]
+    latest_open = tsd[latest_day]["1. open"] 
     latest_close = tsd[latest_day]["4. close"]
-
+    
+    #take user inputs and create a dictionary to pull the data from for the daily email
     dict = {
         "value": symbol,
         "start_price": latest_open,
         "end_price": latest_close
     }
-
+    #end loop once user is finished with inputs
     if symbol == "DONE":
         break
 
-# GET STOCKS 
-
-#Print stock data for user inputted symbols on terminal
+#Call and print dictionary data for all user inputs in terminal
 for k, v in dict.items():   
     line()
     print(f"SELECTED SYMBOL: {symbol}")

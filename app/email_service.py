@@ -1,3 +1,4 @@
+#based off of daily briefings repo
 
 import os
 from dotenv import load_dotenv
