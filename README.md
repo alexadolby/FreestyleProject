@@ -51,16 +51,11 @@ python -m app.email_service # note the module-syntax invocation
 
 > NOTE: the Sendgrid emails might first start showing up in spam, until you designate them as coming from a trusted source (i.e. "Looks Safe")
 >
->![](https://user-images.githubusercontent.com/1328807/77856232-c7a0ff80-71c3-11ea-9dce-7a32b88701c6.png)
-
 As long as each of those scripts works by itself, you can send the email:
 
 ```sh
 python -m app.service # note the module-syntax invocation
 ```
-
-![](https://user-images.githubusercontent.com/1328807/77860069-173ef580-71db-11ea-83c6-5897bb9f4f51.png)
-
 ## Deployment to Heroku
 
 Install Heroku CLI and login
